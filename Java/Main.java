@@ -6,3 +6,7 @@ public class Main {
     }
 
 }
+
+abstract class Person{
+    public abstract void run();
+}
