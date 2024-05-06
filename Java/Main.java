@@ -2,11 +2,18 @@ package Java;
 
 public class Main {
     public static void main(String[] args) {
-        // 2
+        Person p = new Student();
+        p.run();
     }
-
 }
 
-abstract class Person{
+abstract class Person {
     public abstract void run();
+}
+
+class Student extends Person {
+    @Override
+    public void run() {
+        System.out.println("Student.run");
+    }
 }
