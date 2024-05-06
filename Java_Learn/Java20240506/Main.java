@@ -4,10 +4,14 @@ public class Main {
 
 }
 
-interface Person {
+interface Person extends Hello{
     void run();
 
     String getName();
+}
+
+interface Hello {
+    String hello();
 }
 
 class Student implements Person {
@@ -18,12 +22,17 @@ class Student implements Person {
     }
 
     @Override
-    public void run(){
-        System.out.println(this.name+"run");
+    public void run() {
+        System.out.println(this.name + "run");
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return this.name;
+    }
+
+    @Override
+    public String hello(){
+        return "hello";
     }
 }
